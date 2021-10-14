@@ -3,6 +3,7 @@ import Recipie from "./Recipie";
 import './App.css';
 import * as ReactBootStrap from "react-bootstrap";
 
+
 const App = () => {
 
   const APP_ID = '245bd9e5';
@@ -41,20 +42,15 @@ const App = () => {
         <ReactBootStrap.Container>
         <ReactBootStrap.Navbar.Brand href="#home">Claudia's Recipes</ReactBootStrap.Navbar.Brand>
         <ReactBootStrap.Nav className="me-auto">
-          <ReactBootStrap.Nav.Link href="#home">Home</ReactBootStrap.Nav.Link>
+          <ReactBootStrap.Nav.Link href="/">Home</ReactBootStrap.Nav.Link>
           <ReactBootStrap.Nav.Link href="#features">My Recipe's</ReactBootStrap.Nav.Link>
         </ReactBootStrap.Nav>
         </ReactBootStrap.Container>
       </ReactBootStrap.Navbar>
-      <form onSubmit={getSearch} className="search-form">
-        <input 
-          className="search-bar" 
-          type="text" 
-          value={search} 
-          onChange={updateSearch}
-        />
+      <form onSubmit={getSearch} className="search-form"> 
+        <input className="search-bar" type="text" value={search} onChange={updateSearch} placeholder="Search for a recipe..."></input>
         <button className="search-button" type="submit">
-          Search Recipes
+          Search 
         </button> 
       </form>
       <div className="recipies">
