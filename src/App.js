@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Recipie from "./Recipie";
 import './App.css';
-
-
+import * as ReactBootStrap from "react-bootstrap";
 
 const App = () => {
 
@@ -38,6 +37,15 @@ const App = () => {
 
   return (
     <div className="App">
+      <ReactBootStrap.Navbar bg="light" variant="light">
+        <ReactBootStrap.Container>
+        <ReactBootStrap.Navbar.Brand href="#home">Claudia's Recipes</ReactBootStrap.Navbar.Brand>
+        <ReactBootStrap.Nav className="me-auto">
+          <ReactBootStrap.Nav.Link href="#home">Home</ReactBootStrap.Nav.Link>
+          <ReactBootStrap.Nav.Link href="#features">My Recipe's</ReactBootStrap.Nav.Link>
+        </ReactBootStrap.Nav>
+        </ReactBootStrap.Container>
+      </ReactBootStrap.Navbar>
       <form onSubmit={getSearch} className="search-form">
         <input 
           className="search-bar" 
